@@ -1,0 +1,435 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 80px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /* background-color: black; */
+    position: sticky;
+    top: 0;
+    z-index: 11;
+    background-color: #fff;
+
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+    margin: auto;
+    padding: 30px 70px;
+    display: flex;
+}
+
+.header .logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.header .logo img{
+    width: 200px;
+}
+
+.header .menu{
+    width: 60%;
+    height: 100%;
+    
+}
+.header .menu ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    
+}
+
+.header .menu ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0.6;
+    position: relative;
+    
+}
+
+.header .menu ul li:hover a{
+    opacity: 1;
+}
+
+.header .menu ul li a::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    background-color: rgb(209, 203, 203);
+}
+
+.header .menu ul li:hover a::before{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.header .menu ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    background-color: rgb(209, 203, 203);
+}
+
+.header .menu ul li:hover a::after{
+    width: 100%;
+    transition: 0.5s;
+}
+.header .contact{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
+.header .contact button{
+    padding: 13px 25px;
+    border: none;
+    background-color: #0c0c0c;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header .contact button:hover{
+    background-color: rgb(65, 129, 247);
+}
+.header .contact i{
+    border: 1px solid gray;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+/* drop down */
+.drop {
+    position: relative;
+    display: none;
+    animation-name: drop;
+    animation-duration: 0.5s;
+  }
+  
+  .drop-down:hover .drop {
+    display: block;
+    z-index: 111;
+  }
+  
+  .drop .drop-col {
+    padding: 30px 30px;
+    width: 77vw;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #0c0c0c;
+    left: -330px;
+    top: 0px;
+    border-radius: 10px;
+  }
+  
+  .drop .drop-col .card {
+    right: -10px;
+    width: 100%;
+    height: 180px;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s;
+  }
+  .drop .drop-col .card:hover{
+    transform: scale(1.05);
+  }
+  
+  .drop .drop-col .card .img {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .drop .drop-col .card .img img {
+    width: 90px;
+    height: 60%;
+  }
+
+  .drop .drop-col .card .title {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -8px;
+  }
+  
+  .drop .drop-col .card .title p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .drop .drop-col .card button {
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    bottom: -15px;
+    left: 32px;
+    background-color: rgb(65, 129, 247);
+    font-size: 15px;
+    color: #fff;
+    border-radius: 20px;
+    display: flex;
+  }
+  .drop .drop-col .card button:hover{
+    background-color: rgba(0, 0, 0, 0.831);
+  }
+  
+  @keyframes drop {
+    0% {
+      transform: scaleY(0);
+    }
+    100% {
+      transform: scaleY(1);
+      /* transition: 0.5s */
+    }
+  }
+
+  /* section1 */
+section{
+    width: 100%;
+    margin-top: 3px;
+    /* background-color: white; */
+    /* background-image: url('https://i.pinimg.com/474x/80/65/e0/8065e03403f2094886f1a16252127d26.jpg') ; */
+    /* background-color: #8f8f8fa6; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  .slide-show{
+    width: 85%;
+    height: 90vh;
+    /* background-color: #333; */
+    margin: auto;
+    display: flex;
+    padding: 10px;
+  }
+  .slide-show .title{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    /* background-color: bisque; */
+  }
+  .slide-show .title p:nth-child(1){
+    font-size: 25px;
+    opacity: 0.6;
+  }
+  .slide-show .title p:nth-child(2){
+    font-size: 60px;
+  }
+  .slide-show .title h1{
+    font-size: 60px;
+  }
+  .slide-show .title .button{
+    display: flex;
+    gap: 40px;
+    margin: 40px 10px;
+  }
+  .slide-show .title .button button{
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    background-color: rgb(65, 129, 247);
+    color: white;
+    font-weight: bold;
+
+  }
+  .slide-show .title .button button:nth-child(1):hover{
+    background-color: #0c0c0c;
+    transition: 0.4s;
+  }
+  .slide-show .title .button button:nth-child(2){
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+  }
+  .slide-show .title .button button:nth-child(2):hover{
+    background-color: rgb(65, 129, 247);
+    color: #fff;
+    border: 1px solid rgb(65, 129, 247);
+    transition: 0.4s;
+
+  }
+  .slide-show .slide{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    background-image: url(https://xtratheme.com/elementor/watch-shop/wp-content/uploads/sites/79/2021/10/shape3.png);
+  }
+  .slide-show .slide img{
+    width: 500px;
+  }
+/* section2 */
+.about-watch{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  /* background-color: antiquewhite; */
+}
+.about-watch .left{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: cornflowerblue; */
+  gap: 30px;
+  padding-top: 35px;
+}
+.about-watch .left .title{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  padding: 1px ;
+  /* background-color: darkgoldenrod; */
+}
+.about-watch .left .title img{
+  width: 40px;
+  margin-bottom: 10px;
+}
+.about-watch .left .title img:hover{
+  transform: rotateY(360deg);
+  transition: 0.7s;
+}
+.about-watch .left .title p,h3:nth-child(1){
+  font-size: 18px;
+  justify-content: end;
+  text-align: end;
+}
+.about-watch .left .title p,h3:nth-child(3){
+  /* font-size: 15px; */
+  justify-content: start;
+  text-align: start;
+}
+.about-watch .left:nth-child(3) .title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  /* background-color: darkgrey; */
+}
+.about-watch .bottom{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:cornflowerblue ;
+}
+.about-watch .bottom img{
+  width: 100%;
+}
+/* banner */
+.banner {
+  width: 60%;
+  background-color: rgba(226, 226, 226, 0.682);
+  height: 500px;
+  margin-top: 30px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner .sub-banner {
+  background-image: linear-gradient(90deg, rgba(12, 12, 12, 7), rgba(12, 12, 12, 7)), url('https://xtratheme.com/elementor/watch-shop/wp-content/uploads/sites/79/2021/10/box-bg-1.jpg');
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin-left: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 70px;
+  color: #fff;
+}
+
+.banner .sub-banner h1 {
+  font-size: 40px;
+}
+
+.banner .sub-banner p {
+  font-size: 10px;
+}
+
+.banner .sub-banner .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 150px;
+}
+.banner .sub-banner .image .image-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .sub-banner .image .image-content .img {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .sub-banner .image .image-content .img img {
+  width: 50px;
+  height: 70px;
+}
+
+
+
+
+
+
+
+
+  
